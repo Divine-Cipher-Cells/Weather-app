@@ -6,7 +6,7 @@ const partialPath=require("path").join(__dirname,"../templates/partials")
 const hbs=require("hbs");
 const geocode=require("./utils/geocode");
 const foreCast=require("./utils/weatherForecast");
-
+const port = process.env.PORT || 3000;
 app.use(express.static(path));
 // this is the directory from where it will load soeven in dynamic files we must mention link and script as if that file is in this directory
 
@@ -110,6 +110,6 @@ app.get("*",(req,res)=>{
 })
 
 
-app.listen(3000,() =>{
+app.listen(port,() =>{
 console.log("DOne:")
 });
