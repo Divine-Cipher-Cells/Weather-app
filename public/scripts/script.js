@@ -1,4 +1,4 @@
-console.log("Harsh Singh");
+
 
 // it is a browser based web api so cannot run on node side
 // json() of the json response type takes in response reads it and returns a promise which on resolving returns a parsed object as response 
