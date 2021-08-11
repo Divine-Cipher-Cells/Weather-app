@@ -194,9 +194,9 @@ border-color:#002366;
 a:hover{
     border-radius: 10px;
     color:#eeeeee;
-    background-color: #002366;
-    transition: all,2s;
-    padding: 2px;
+    background-color: yellowgreen;
+    transition: all 350ms;
+    padding: 4px 6px;
 }
 .flexing{
   display: flex;
@@ -215,4 +215,23 @@ a:hover{
 .flexing a i{
   width: 50px;
   height: 50px;
+}
+.toad{
+  color: white;
+  border:solid;
+  border-color: aliceblue;
+  border-radius: 15px;
+  background-color: #002366;
+  font: "Courier New",monospace;
+  padding: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: fit-content;
+  margin-top: 5px;
+}
+.toad:hover{
+  background-color: yellow;
+  border-color:black;
+  color: #f93a13;
+  transition: all 500ms;
 }

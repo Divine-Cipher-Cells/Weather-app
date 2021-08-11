@@ -21,7 +21,7 @@ e.preventDefault();
 
 const location=search.value;
 
-message1.innerHTML="Loading..."
+message1.innerHTML=`<i class='fa fa-spinner fa-lg' aria-hidden='true'></i>`+"Loading..."
 
 message2.textContent=""
 
@@ -32,12 +32,12 @@ fetch(`/weather?address=${location}`).then((response)=>{
 response.json().then((data)=>{
     if(data.error)
     {
-        message1.textContent=data.error
+        message1.innerHTML=`<div class='toad'>`+data.error+"</div>"
         return;
     }
    // console.log(`location: ${data.location}, forecast: ${data.forecast} `)
-   message1.innerHTML=data.location;
-   message2.textContent=data.forecast;
+   message1.innerHTML=`<div class='toad'>`+data.location+"</div>";
+   message2.innerHTML=`<div class='toad'>`+data.forecast+"</div>";
 
 })
 });
