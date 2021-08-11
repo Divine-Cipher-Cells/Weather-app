@@ -21,7 +21,8 @@ e.preventDefault();
 
 const location=search.value;
 
-message1.textContent="Loading..."
+message1.innerHTML="Loading..."
+
 message2.textContent=""
 
 
@@ -35,7 +36,7 @@ response.json().then((data)=>{
         return;
     }
    // console.log(`location: ${data.location}, forecast: ${data.forecast} `)
-   message1.textContent=data.location;
+   message1.innerHTML=data.location;
    message2.textContent=data.forecast;
 
 })

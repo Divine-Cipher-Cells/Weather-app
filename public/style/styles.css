@@ -1,48 +1,218 @@
+html{
+    background-color:#fce9b1;
+    background-image: url("../img/back.jpg");
+    background-repeat: repeat-y;
+background-size:100%;
+}
 body{
     color:#333333;
-    font-family: arial;
+    font-family: Tahoma, sans-serif;
     max-width: 650px;
-    margin:0 auto;
+    margin: 10px auto;
     padding: 0 16px;
 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+    background-color: #9cdfe5;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+box-sizing: border-box;
+border-radius: 30px;
+background-image: url("../img/form.png");
+background-repeat: no-repeat;
+background-size: 100%;
+opacity: 0.8;
 }
+
 footer{
-    color:#888888;
+    color:darkblue;
     border-top: 1px solid #eeeeee;
     padding: 16px 0;
     margin-top:16px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
 }
 header{
     margin: 16px 0 40px 0;
+    opacity: 1;
 }
+
 h1{
     font-size: 64px;
     margin-bottom: 16px;
+    opacity: 1;
 }
 header a{
     color: #888888;
     margin: 0 16px 0 0;
     text-decoration:none;
-    
+
 }
 img{
     width:250px
 }
 .main-content{
     flex-grow: 1;
+    
 }
 input{
-    border:1px solid #cccccc;
     padding: 8px;
+border:solid;
+    border-radius: 20px;
+    outline:transparent;
+    transition: border 1.5s;
 }
+
+input:focus,input:hover{
+    padding: 8px;
+    border:blue solid;
+        border-radius: 20px;
+        outline:transparent;
+}
+
+
 button{
     border:1px solid #888888;
     background: #888888;
     color: white;
     padding:8px;
     cursor: pointer;
+}
+
+
+/* CSS */
+button {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 12px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  button{
+    padding: 19px 32px;
+  }
+}
+
+button:before,
+button:after {
+  border-radius: 60px;
+}
+
+button:before {
+  background-color: rgba(249, 58, 19, .32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+button:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+button:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+button:active:not(:disabled) {
+  color: #ccc;
+}
+
+button:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+.l{
+    border: solid;
+    border-radius: 20px;
+    padding: 5px 4px;
+    width: fit-content;
+color: #fff;
+border-color:#002366;
+}
+a:hover{
+    border-radius: 10px;
+    color:#eeeeee;
+    background-color: #002366;
+    transition: all,2s;
+    padding: 2px;
+}
+.flexing{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin: 0px;
+  padding: 20px 0;
+
+}
+.flexing:hover{
+  background-color: #002366;
+  color: #ccc;
+  transition: all 1s ease-out;
+}
+.flexing a i{
+  width: 50px;
+  height: 50px;
 }
