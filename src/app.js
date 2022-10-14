@@ -85,7 +85,7 @@ return res.send({
 
 app.get("/help",(req,res)=>{
     res.render("help",{
-        name:"Harsh",
+        name:"Mohit",
         title:"Help",
         helpText:"The help message is shown:"
     })
@@ -95,7 +95,7 @@ app.get("/help",(req,res)=>{
 app.get("/help/*",(req,res)=>{
     res.render("404page",{
         error:"Help Article Not Found!",
-        name:"Harsh",
+        name:"Mohit",
         title:"404"
     })
 })
@@ -104,7 +104,7 @@ app.get("/help/*",(req,res)=>{
 app.get("*",(req,res)=>{
     res.render("404page",{
         error:"Page Not Found!",
-        name:"Harsh",
+        name:"Mohit",
         title:"404"
     })
 })
